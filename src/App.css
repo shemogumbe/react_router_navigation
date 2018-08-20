@@ -13,6 +13,11 @@
   text-decoration: none;
 }
 
+.is-active{
+  color: blue;
+  font-weight: 32 px;
+}
+
 .App-header {
   background-color: #222;
   height: 150px;

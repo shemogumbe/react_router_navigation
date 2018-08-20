@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 
 class App extends Component {
@@ -11,9 +11,9 @@ class App extends Component {
         <header className="App-header">
           <h1 className="App-title">Welcome to  React Router v4</h1>
           <ul className="nav">
-            <Link to="/" className="link">Home</Link>
-            <Link to="/about" className="link">About Us</Link>
-            <Link to="/contact" className="link">Contact</Link>
+            <NavLink to="/" activeClassName="is-active" className="link">Home</NavLink>
+            <NavLink to="/about" activeClassName="is-active" className="link">About Us</NavLink>
+            <NavLink to="/contact" activeClassName="is-active" className="link">Contact</NavLink>
 
           </ul>
         </header>
