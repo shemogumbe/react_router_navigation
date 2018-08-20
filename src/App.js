@@ -1,12 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 
-
-import Home from './components/Home';
-import About from './components/About';
-import Contact from './components/Contact';
-
-import { BrowserRouter, Route } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 class App extends Component {
@@ -14,11 +9,11 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <h1 className="App-title">Welcome to   Royal</h1>
+          <h1 className="App-title">Welcome to  React Router v4</h1>
           <ul className="nav">
-            <li>Home</li>
-            <li>About Us</li>
-            <li>Contact</li>
+            <Link to="/" className="link">Home</Link>
+            <Link to="/about" className="link">About Us</Link>
+            <Link to="/contact" className="link">Contact</Link>
 
           </ul>
         </header>
