@@ -9,6 +9,7 @@ import { BrowserRouter, Route, Switch} from 'react-router-dom';
 import Home from './components/Home';
 import About from './components/About';
 import Contact from './components/Contact';
+import NotFound from './components/NotFound';
 
 
 
@@ -19,9 +20,11 @@ ReactDOM.render(
 <div>
  <App />
  <Switch>
- <Route path="/" component={Home} exact={true} />
- <Route path="/about" component={About}/>
- <Route path="/" component={Contact}/>
+   <Route path="/" component={Home} exact={true} />
+   <Route path="/home" component={Home} exact={true} />
+   <Route path="/about" component={About}/>
+   <Route path="/contact" component={Contact}/>
+   <Route component={NotFound}/>
  </Switch>
  </div>
 </BrowserRouter>,
