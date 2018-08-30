@@ -69,6 +69,8 @@ database.ref()
 })
 
 //fetch real time data
-database.ref().on('value', (snapshot) => {
+database.ref("test").on('value', (snapshot) => {
     console.log(snapshot.val())
+}, (e) => {
+    console.log("An error occured in the subscription", +e)
 })
