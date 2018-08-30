@@ -36,3 +36,9 @@ database.ref('married').update({
 }).catch((e) => {
     console.log("Error in editting marital status", +e)
 })
+
+//update db to add location
+database.ref('location').set({
+  city: "Nairobi",
+  country: "Kenya"
+})
