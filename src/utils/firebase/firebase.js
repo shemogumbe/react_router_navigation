@@ -42,3 +42,6 @@ database.ref('location').set({
   city: "Nairobi",
   country: "Kenya"
 })
+
+//delete a ref
+database.ref('netWealth').remove();
