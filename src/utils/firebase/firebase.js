@@ -4,7 +4,7 @@ import * as firebase from 'firebase';
 var config = {
     apiKey: "AIzaSyCiFb2iVvnw-624V0dJupc4tPNocd97XUk",
     authDomain: "andelamrm.firebaseapp.com",
-    databaseURL: "https://andelamrm.firebaseio.com",
+    databaseURL:"https://andelamrm.firebaseio.com",
     projectId: "andelamrm",
     storageBucket: "andelamrm.appspot.com",
     messagingSenderId: "753057157806"
@@ -15,7 +15,13 @@ firebase.initializeApp(config);
 const database = firebase.database()
 
 database.ref().set({
-    name: "Shem Ogumbe"
+    name: "Shem Ogumbe",
+    age: 25,
+    job: {
+        title: "Technical Team Lead",
+        company: "Andela"
+    },
+    married: false
 }).then(() => {
     console.log("Data saved succesfully")
 }).catch((e) => {
