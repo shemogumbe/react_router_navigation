@@ -59,11 +59,16 @@ database.ref('job/title').set(
 //update to remove
 database.ref('married/secondWife').set(null);
 
-//fetch data
+//fetch data that does not change
 database.ref()
  .once('value')
 .then((snapshot) => {
     console.log(snapshot.val())
 }).catch((e) => {
     console.log("an error occured", + e)
+})
+
+//fetch real time data
+database.ref().on('value', (snapshot) => {
+    console.log(snapshot.val())
 })
