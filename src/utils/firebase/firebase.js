@@ -45,3 +45,9 @@ database.ref('location').set({
 
 //delete a ref
 database.ref('netWealth').remove();
+
+//update a ref
+database.ref().update({
+    name: "Shem Owaga",
+    age: 28
+})
