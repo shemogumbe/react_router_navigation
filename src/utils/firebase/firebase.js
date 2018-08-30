@@ -27,3 +27,12 @@ database.ref().set({
 }).catch((e) => {
     console.log("An error occured", +e)
 })
+
+database.ref('married').update({
+    firstWife: "Joy",
+    secondWife: "Ruth"
+}).then(() => {
+    console.log("Marital status updated")
+}).catch((e) => {
+    console.log("Error in editting marital status", +e)
+})
