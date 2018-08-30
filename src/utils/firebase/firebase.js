@@ -51,3 +51,10 @@ database.ref().update({
     name: "Shem Owaga",
     age: 28
 })
+
+//updare nested objects
+database.ref('job/title').set(
+     "Senior Developer");
+
+//update to remove
+database.ref('married/secondWife').set(null);
